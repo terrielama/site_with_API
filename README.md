@@ -6,3 +6,6 @@ Si le bouton "Entré" est tapée, le défilement des films est stoppée, si elle
 -----------------------------------LA MUSIQUE-----------------------------------
 Si le bouton "s" est tapée, une musique se lance, si elle est tapée une nouvelle fois la musique s'arrête.
 
+
+
+https://scrollingmovies.netlify.app/
