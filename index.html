@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Start and Stop</title>
+    <title>Clavier</title>
     <meta
-    name="description"
-    content="Phrase descriptive d’environ 160 caractères"
+      name="description"
+      content="Phrase descriptive d’environ 160 caractères"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-    rel="preconnectautomatic"
-href="https://fonts.gstatic.com"
-    crossorigin
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap"
+      rel="stylesheet"
     />
+
     <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap"
-rel="stylesheet"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+
+    <style>
+
+        :root
+        {
+            --info-color: #636363;
+        }
+
+        .material-symbols-outlined {
+                font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 40;
+                position: fixed;
+                font-size: 80px;
+                cursor: pointer;
+                opacity: 0.8;
+                top: 60px;
+                right: 60px;
+                color:var(--info-color);
+                transition: 1S cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .material-symbols-outlined:hover
+        {
+            opacity: 1;
+        }
+
+        .material-symbols-outlined:hover + aside
+        {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        aside
+        {
+            opacity: 0;
+            transition: 1S cubic-bezier(0.075, 0.82, 0.165, 1);
+            background-color: var(--info-color);;
+            padding: 20px;
+            border-radius: 20px;
+            color: white;
+            position: fixed;
+            top: 70px;
+            right: 140px;
+            width: 200px;
+            font-size: 14px;
+            visibility: hidden;
+        }
+
+        aside::after
+        {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
+
+            border-left: 10px solid var(--info-color);
+            
+        }
+
+      </style>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/carousel-clavier.js" defer></script>
 </head>
 <body>
-    <main></main>
+    <audio src="./music/cest-si-bon-emilie-claire-barlow.mp3"></audio>
+    <span class="material-symbols-outlined"> info </span>
+    <aside>
+        <p><code>Return : </code>Stop/Start carousel </p>
+        <p><code>S: </code>Stop/Start son </p>
+    </aside>
+    <main>
+    </main>
 </body>
 </html>
