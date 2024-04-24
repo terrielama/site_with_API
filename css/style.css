@@ -1,0 +1,125 @@
+:root {
+    --bg-color: #323232;
+    --txt-dark-color: #282823;
+    --txt-light-color: #eaeace;
+    
+}
+body {
+    background-color: var(--bg-color);
+    font-family: 'Syne', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    
+}
+h1 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+main {
+    display: grid;
+    padding: 40px;
+    gap: 40px;
+
+    width: 100dvw;
+    height: 100dvh;
+    overflow-x: scroll;
+    overflow-x: hidden;
+
+    grid-auto-rows: calc(100dvh - 80px);
+
+    scroll-snap-type: y mandatory;
+}
+section {
+    background-color: var(--bg-color);
+    color: var(--txt-dark-color);
+    padding: 120px;
+    border-radius: 80px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 100%;
+    gap: 60px;
+
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+
+    scroll-snap-align: center;
+}
+.movie__poster {
+    border-radius: 40px;
+    max-width: 100%;
+    max-height: 180%;
+    width: auto;
+    height: auto;
+}
+.movie__text {
+    display: grid;
+}
+.movie__text > p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    overflow: hidden;
+}
+section:nth-child(1) {
+    --bg-color: #c6c8ae;
+}
+section:nth-child(2) {
+    --bg-color: #b60504;
+    color: var(--txt-light-color);
+}
+section:nth-child(3) {
+    --bg-color: #050505;
+    color: var(--txt-light-color);
+}
+section:nth-child(4) {
+    --bg-color: #7c4319;
+    color: var(--txt-light-color);
+}
+section:nth-child(5) {
+    --bg-color: #311d0f;
+    color: var(--txt-light-color);
+}
+section:nth-child(6) {
+    --bg-color: #17191e;
+    color: var(--txt-light-color);
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    main {
+        padding: 16px;
+        gap: 16px;
+        grid-auto-rows: calc(100dvh - 32px);
+    }
+    section {
+        gap: 16px;
+        padding: 20px;
+        border-radius: 40px;
+    }
+    .movie__poster {
+        border-radius: 20px;
+    }
+    .movie__text > p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+    }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+    section {
+        grid-template-columns: 1fr;
+    }
+    .movie__text {
+        display: none;
+    }
+}
